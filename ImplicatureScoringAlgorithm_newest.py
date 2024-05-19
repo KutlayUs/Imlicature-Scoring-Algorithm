@@ -184,17 +184,20 @@ class Algorithm:
                 Implicature_Score.append(imp)
                 Accuracy_Score.append(accu)
 
-            self.data['Implicated_score']=Implicature_Score
+            self.data['Implicature_score']=Implicature_Score
             self.data['Accuracy_score']=Accuracy_Score
             self.data.to_excel(save_path, index=False)
         
 #====== Calling the codes to run the algorithm ===============#
             
-Algorithm_run= Algorithm("CombinedOutput_DelayNoDelay.xlsx","target_and_diagnostic_words.xlsx")
+Algorithm_run= Algorithm(#path of Excel data, #target and diagnostic words)
         
-Algorithm_run.apply("Sentence", "Vignette", "New_CombinedOutput_DelayNoDelay.xlsx")
+Algorithm_run.apply( #column_name_sentences,  #column_name_vignettes, #save_path)
 
-
+    #>For the data wanted to be analyzed<#
+        #column_name_sentences= Name of the column containing participant memory recalls
+        #column_name_vignettes= Name of the vignettes contains the name of the vignettes participants recalled
+        #save_path= Path of the output
         
 
 
