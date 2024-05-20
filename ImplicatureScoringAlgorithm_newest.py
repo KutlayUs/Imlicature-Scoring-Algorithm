@@ -1,7 +1,6 @@
 import pandas as pd # module used for interacting with excel datasets
 import re #module used for cleaning sentences
 import nltk
-from nltk.tokenize import word_tokenize #module used for dividing text into words
 from nltk.corpus import names #module used to get name corpus
 import spacy #module used to get 'en_core_web_sm' corpus
 
